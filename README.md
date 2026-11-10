@@ -1,5 +1,8 @@
 # eLC API playground
 
+Originally intended for the Gen AI Competition's Jump Start event, this app is meant to show how vibe coding can be used to create a playground/demonstration application for learning about the Brightspace Valence API.
+
+
 A local Streamlit playground with 16 individually runnable, read-only Brightspace API operations. It supports temporary bearer tokens, browser Cookie headers, and an explicitly synthetic rehearsal mode. Registered OAuth, Make, Claude, Microsoft Graph, Slack, and polling are not implemented in this first milestone.
 
 ## Run on Windows
