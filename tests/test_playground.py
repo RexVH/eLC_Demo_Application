@@ -120,7 +120,7 @@ def test_nested_content_and_version_ordering():
 def test_ui_sample_sequence_and_disconnect():
     app = AppTest.from_file(str(Path(__file__).resolve().parents[1] / "app.py"), default_timeout=15).run()
     assert not app.exception
-    app.button(key="sample_start").click().run()
+    app.button(key="sample_connection").click().run()
     app.selectbox(key="operation").select("enrollments").run()
     app.button(key="run").click().run()
     assert len(app.session_state["courses"]) == 4
@@ -145,7 +145,7 @@ def test_ui_sample_sequence_and_disconnect():
 
 def test_connect_clears_old_data_and_credential_widget():
     app = AppTest.from_file(str(Path(__file__).resolve().parents[1] / "app.py"), default_timeout=15).run()
-    app.button(key="sample_start").click().run()
+    app.button(key="sample_connection").click().run()
     app.selectbox(key="operation").select("enrollments").run()
     app.button(key="run").click().run()
     app.radio(key="nav").set_value("Connection").run()

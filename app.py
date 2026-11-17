@@ -11,7 +11,7 @@ from sample import COURSES, SampleClient
 
 st.set_page_config(page_title="eLC API playground", page_icon=":material/api:", layout="wide")
 
-DEFAULTS = {"client": None, "source": "Disconnected", "verified": False, "courses": [], "content": {}, "history": [], "last": None, "lp": "1.49", "le": "1.82", "nav": "API explorer", "connection_error": "", "credential": ""}
+DEFAULTS = {"client": None, "source": "Disconnected", "verified": False, "courses": [], "content": {}, "history": [], "last": None, "lp": "1.49", "le": "1.82", "nav": "Connection", "connection_error": "", "credential": ""}
 for key, value in DEFAULTS.items():
     if key not in st.session_state:
         st.session_state[key] = value
@@ -81,7 +81,7 @@ def execute(key: str, course: str, item: str, bookmark: str):
 with st.sidebar:
     st.markdown("### :material/api: eLC playground")
     st.caption("Jump Start · UGA Gen AI Competition")
-    st.radio("Workspace", ["API explorer", "Connection", "Run log", "Getting started"], key="nav")
+    st.radio("Workspace", ["Connection", "API explorer", "Run log", "Getting started"], key="nav")
     st.divider()
     source = st.session_state.source
     st.badge(source, color="orange" if source == "Sample data" else "gray")
